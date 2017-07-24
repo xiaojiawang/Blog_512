@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.2'
 # gem 'sqlite3'
 gem 'mysql2'
+gem 'pg', :group => :production 
 gem 'simditor'
 gem 'puma', '~> 3.7'
 
