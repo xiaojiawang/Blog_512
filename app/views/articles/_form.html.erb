@@ -1,0 +1,35 @@
+<% content_for :content do %>
+<%= form_for @article do |f| %>
+<%= f.label "标题" %>
+<%= f.text_field :title%>
+<%#= f.label "作者" %>
+<%#= f.text_field :author%>
+
+<%= f.label "内容" %>
+<textarea name="article[content]" id="article_content">
+<%#= f.text_area :content, class: "form-control" ,:style => "width:800px",:id => "editor"%>
+</textarea>
+<%= f.submit '提交' %>
+<% end %>
+
+<% end %>
+<script type="text/javascript">
+var editor = new Simditor({
+        textarea: $('#article_content'),
+        toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', '|',
+            'ol', 'ul', 'blockquote', 'code', 'table', 'link', 'image', '|',
+            'hr', 'indent', 'outdent', 'alignment'],
+        placeholder: "请在这里输入内容",
+        pasteImage: true,
+        upload: {
+            url: '/images',
+            params: null,
+            // fileKey: 'upload_file',
+            connectionCount: 3,
+            leaveConfirm: 'Uploading is in progress, are you sure to leave this page?'
+        },
+        style:{
+            width:"800px"
+        }
+    });
+</script>

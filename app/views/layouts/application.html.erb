@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "bootstrap" %>
+    <%#= stylesheet_link_tag "bootstrap-theme" %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "bootstrap" %>
+    <%= javascript_include_tag "jquery-3.2.1" %>
+  </head>
+
+  <body>
+  <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+  <ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="/articles/">主页</a></li>
+  <li role="presentation"><%= link_to '文章', articles_path%></li>
+  <li role="presentation"><%= link_to '用户', users_path%></li>
+  <li role="presentation"><%= link_to '注销', sign_out_path%></li>
+</ul>
+<%= yield :content%>
+<%= yield :login%>
+</div>
+  <div class="col-md-2"></div>
+</div>
+  
+    <%= yield %>
+  </body>
+</html>

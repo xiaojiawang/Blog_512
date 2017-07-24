@@ -1,0 +1,29 @@
+<!--<p><#%= sanitize @article.content %></p>-->
+
+
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+
+
+
+
+    <div class="well">
+      <h3 style="text-align: center"><%= raw @article.title %></h3>
+    </div>
+    <div class="well">
+      <%= raw @article.content %>
+      <!-- <textarea id="article_content"><%#= @article.content%></textarea> -->
+
+    </div>
+    <div class="well">
+      <b><%= link_to '修改', edit_article_path(@article) %></b> |
+      <b><%= link_to '返回', articles_path %></b>
+    </div>
+  </div>
+
+
+  <div class="col-lg-2"></div>
+
+</div>
+

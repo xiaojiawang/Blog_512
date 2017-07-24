@@ -1,0 +1,14 @@
+<%= form_for (@user) do |user| %>
+姓名：
+<%= user.text_field :name %><br>
+密码：
+<%= user.text_field :password %><br>
+电话：
+<%= user.text_field :phone %><br>
+邮箱：
+<%= user.text_field :email %><br>
+地址：
+<%= user.text_field :address %><br>
+
+<%= user.submit %>
+<% end %>

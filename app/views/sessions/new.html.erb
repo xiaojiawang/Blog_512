@@ -1,0 +1,9 @@
+<% content_for :login do %>
+<br>
+<%= form_tag sessions_path do %>
+
+<%= text_field_tag :name, params[:name], placeholder: '请输入您的用户名' %><br><br>
+<%= text_field_tag :password, params[:password], placeholder: '请输入您的密码' %><br><br>
+<%= submit_tag "立即登录", class: "btn btn-green btn-submit", disable_with: "提交中..."%>
+<% end %>
+<% end %>
