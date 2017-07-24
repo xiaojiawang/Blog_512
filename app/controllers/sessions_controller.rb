@@ -2,10 +2,7 @@ class SessionsController < ApplicationController
     skip_before_action :require_user_sign_in
     before_action :current_user
 
-    
-
     def new
-      
       if session[:user_id]
         current_user  
         redirect_to users_path
@@ -16,9 +13,11 @@ class SessionsController < ApplicationController
 
     def create
     clear_session
-    if User.authenticated(params[:name], params[:password])
-      user=User.where(name: params[:name]).where(password: params[:password]).first
+    if user = User.authenticated(params[:name], params[:password])
+    # if User.authenticated(params[:name], params[:password])
+    #   user=User.where(name: params[:name]).where(password: params[:password]).first
       session[:user_id] = user.id
+      @current_user=nil
       # flash.now[:ok] = "成功"
       redirect_to users_path
     else

@@ -1,3 +1,4 @@
+<% content_for :content do %>
 <%= form_for (@user) do |user| %>
 姓名：
 <%= user.text_field :name %><br>
@@ -11,4 +12,6 @@
 <%= user.text_field :address %><br>
 
 <%= user.submit %>
+<% end %>
+
 <% end %>

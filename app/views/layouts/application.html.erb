@@ -35,9 +35,16 @@
               <li><%= link_to '文章', articles_path%></li>
               <li><%= link_to '用户', users_path%></li>
             </ul>
+            <% if @current_user %>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to '注销', sign_out_path, data:{ confirm: "确定注销吗"}%></li>
             </ul>
+            <% else %>
+            <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to '注册', new_user_path%></li>
+            <li><%= link_to '登录', sign_in_path%></li>
+            </ul>
+            <% end %>
           </div>
           </nav>
 <%= yield :content%>

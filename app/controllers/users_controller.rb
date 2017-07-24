@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
   before_action :find_user, only: [:edit, :update, :show, :destory]
-  
+  skip_before_action :require_user_sign_in, only: [:new, :create]
   def new
     @user=User.new
   end
 
   def create
     @user=User.new(user_params)
+    # @user.password = params[:password]
     if @user.save
       redirect_to users_url
     else

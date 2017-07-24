@@ -13,6 +13,7 @@ gem 'mysql2'
 gem 'pg', :group => :production 
 gem 'simditor'
 gem 'puma', '~> 3.7'
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 
 gem 'sass-rails', '~> 5.0'
 
