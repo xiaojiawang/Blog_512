@@ -29,6 +29,7 @@ class SessionsController < ApplicationController
 
   def clear_session
     session[:user_id] = nil
+    @current_user=nil
   end
 
   def destroy

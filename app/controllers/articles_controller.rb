@@ -38,6 +38,10 @@ class ArticlesController < ApplicationController
       redirect_to articles_path
     end
   end
+
+  def guest
+    @articles=Article.all
+  end
 private
   def article_params
     params.require(:article).permit(:title, :author, :content)
