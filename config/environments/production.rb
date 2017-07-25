@@ -31,7 +31,7 @@ Rails.application.configure do
   config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
-  config.assets.precompile += %w( application.css simditor.js simditor.css bootstrap.css bootstrap-theme.css application.js bootstrap.js jquery-3.2.1.js)
+  config.assets.precompile += %w( application.css simditor.css bootstrap.css bootstrap-theme.css application.js bootstrap.js jquery-3.2.1.js)
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
