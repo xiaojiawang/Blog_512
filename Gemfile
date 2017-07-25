@@ -10,7 +10,11 @@ end
 gem 'rails', '~> 5.1.2'
 # gem 'sqlite3'
 gem 'mysql2'
-gem 'pg', :group => :production 
+group :production do
+ gem 'pg'
+ gem 'rails_12factor'
+end
+
 gem 'simditor'
 gem 'puma', '~> 3.7'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
