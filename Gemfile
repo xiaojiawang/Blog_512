@@ -11,8 +11,7 @@ gem 'rails', '~> 5.1.2'
 # gem 'sqlite3'
 gem 'mysql2'
 group :production do
- gem 'pg'
- gem 'rails_12factor'
+gem 'mysql2'
 end
 
 gem 'simditor'
